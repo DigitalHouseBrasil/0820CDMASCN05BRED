@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ObtendoElementos</string>
+    <string name="mensagem_par">%d é par</string>
+    <string name="mensagem_impar">%.2f é impar</string>
+</resources>
