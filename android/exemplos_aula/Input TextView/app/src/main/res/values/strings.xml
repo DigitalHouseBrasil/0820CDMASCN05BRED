@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CicloActivity</string>
+    <string name="meuTexto"><u>Com Underline</u></string>
+</resources>
