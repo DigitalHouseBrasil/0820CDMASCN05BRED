@@ -5,3 +5,7 @@ fun main() {
     println(time1 - 1)
     println(time1 == time2)
 }
+
+fun printaNaTela() {
+    
+}
