@@ -7,5 +7,5 @@ fun main() {
 }
 
 fun printaNaTela() {
-    
+    print("Printado")
 }
