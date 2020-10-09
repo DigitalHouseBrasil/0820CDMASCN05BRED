@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="sans-serif"
-        android:text="LOGIN"
+        android:text="Login"
         android:textColor="@color/colorWhite"
         android:textSize="34sp"
         android:layout_marginTop="80dp"/>
@@ -37,13 +37,14 @@
         android:orientation="vertical"
         android:paddingEnd="40dp"
         android:paddingStart="40dp"
-        android:paddingBottom="20dp"
         android:layout_gravity="center|center_vertical">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="email"
+            android:singleLine="true"
+            android:inputType="text"
             android:textColorHint="@color/colorWhite"
             android:backgroundTint="@color/colorWhite"/>
 
