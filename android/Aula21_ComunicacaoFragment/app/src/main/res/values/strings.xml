@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Aula21_ComunicacaoFragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="n_o_tem_nada">Não tem nada</string>
+    <string name="clica">Clica</string>
+</resources>
