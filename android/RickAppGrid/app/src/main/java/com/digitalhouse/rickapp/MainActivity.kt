@@ -28,7 +28,14 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.lista)
         val manager = GridLayoutManager(this, 2)
 
-        val customAdapter = CustomAdapter(personagens)
+        var toast: Toast? = null
+
+        val customAdapter = CustomAdapter(personagens) {
+            toast?.cancel()
+
+            toast = Toast.makeText(this@MainActivity, it.nome, Toast.LENGTH_LONG)
+            toast?.show()
+        }
 
         recyclerView.apply {
             setHasFixedSize(true)
