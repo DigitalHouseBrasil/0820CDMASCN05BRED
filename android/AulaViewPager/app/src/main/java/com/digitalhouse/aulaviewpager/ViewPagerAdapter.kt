@@ -16,5 +16,6 @@ class ViewPagerAdapter(private val fragments: List<Fragment>,
     override fun getItem(position: Int) = fragments[position]
 
     // Retornar o nome da tab
+    // Se eu quiser que seja exibido somente os ícones, retirar essa função
     override fun getPageTitle(position: Int) = titulos[position]
 }
