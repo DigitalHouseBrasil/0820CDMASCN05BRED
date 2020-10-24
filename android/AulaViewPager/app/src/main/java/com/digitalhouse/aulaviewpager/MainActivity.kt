@@ -7,6 +7,7 @@ import com.google.android.material.tabs.TabLayout
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         // Cria a lista com os fragments
         val fragments = listOf(
-            MeuFragment(), MeuFragment(), MeuFragment()
+            MeuFragment.newInstance("Felipe", true),
+            MeuFragment.newInstance("Paulo", false),
+            MeuFragment.newInstance("Renan", true)
         )
 
         // Cria a lista com os nomes das tabs
@@ -49,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 // Verifica se é a segunda tab
                 if (selected!!.position == 1) {
                     // Deixa invisível
-                    tab.getTabAt(1)!!.badge?.isVisible = false
+                    selected.badge?.isVisible = false
                 }
             }
 
