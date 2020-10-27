@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         tab.setupWithViewPager(pager)
 
         pager.adapter = LoginAdapter(
-            listOf(LoginFragment(), LoginFragment()),
+            listOf(LoginFragment(), SignUpFragment()),
             listOf("Sign In", "Sign Up"),
             supportFragmentManager
         )
