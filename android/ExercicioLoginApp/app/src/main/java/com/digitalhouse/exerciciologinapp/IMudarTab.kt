@@ -1,5 +1,6 @@
 package com.digitalhouse.exerciciologinapp
 
 interface IMudarTab {
-    fun mudarTab()
+    fun mudarTab(posicaoAtual: Int)
+    fun userNameAlterado(username: String)
 }

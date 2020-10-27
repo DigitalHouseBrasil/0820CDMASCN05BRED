@@ -24,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTextUserNameSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -89,6 +90,7 @@
         android:text="I Agree"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
