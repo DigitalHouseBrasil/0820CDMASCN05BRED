@@ -17,7 +17,6 @@ import com.google.android.material.textfield.TextInputLayout
 class LoginFragment : Fragment() {
 
     private lateinit var mudarTabListener: IMudarTab
-    private lateinit var context: Context
     private lateinit var minhaView: View
 
     override fun onCreateView(
@@ -68,7 +67,6 @@ class LoginFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        this.context = context
         mudarTabListener = context as IMudarTab
     }
 
