@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 
 class MainFragment : Fragment() {
     override fun onCreateView(
@@ -21,16 +22,16 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val navController = Navigation.findNavController(view)
+        val navController = findNavController()
 
         view.findViewById<Button>(R.id.button).setOnClickListener {
-            navController.navigate(R.id.detalheFragment)
+            navController.navigate(R.id.action_mainFragment_to_detalheFragment2)
         }
 
         view.findViewById<Button>(R.id.button3).setOnClickListener {
             val bundle = bundleOf("ANIMAL" to "PAPAGAIO")
 
-            navController.navigate(R.id.testeActivity, bundle)
+            navController.navigate(R.id.action_mainFragment_to_testeActivity, bundle)
         }
     }
 }

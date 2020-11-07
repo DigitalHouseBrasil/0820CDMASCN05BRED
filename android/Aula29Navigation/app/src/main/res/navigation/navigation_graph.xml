@@ -12,13 +12,16 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_detalheFragment2"
-            app:destination="@id/detalheFragment" />
+            app:destination="@id/detalheFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_left"
+
+            />
         <action
             android:id="@+id/action_mainFragment_to_testeActivity"
             app:destination="@id/testeActivity" />
-        <action
-            android:id="@+id/action_mainFragment_to_azulFragment"
-            app:destination="@id/azulFragment" />
     </fragment>
     <fragment
         android:id="@+id/detalheFragment"
