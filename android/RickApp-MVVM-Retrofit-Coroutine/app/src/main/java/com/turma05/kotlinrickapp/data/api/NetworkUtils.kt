@@ -7,8 +7,8 @@ class NetworkUtils {
     companion object {
         private const val BASE_URL = "https://rickandmortyapi.com/api/"
 
-        fun getRetrofitInstance(): Retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+        fun getRetrofitInstance(baseUrl: String = BASE_URL): Retrofit = Retrofit.Builder()
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

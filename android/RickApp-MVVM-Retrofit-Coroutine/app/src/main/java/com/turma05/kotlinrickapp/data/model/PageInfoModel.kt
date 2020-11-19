@@ -1,7 +1,9 @@
 package com.turma05.kotlinrickapp.data.model
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+@Keep
 data class PageInfoModel (
     @SerializedName("count")
     val total: Int,

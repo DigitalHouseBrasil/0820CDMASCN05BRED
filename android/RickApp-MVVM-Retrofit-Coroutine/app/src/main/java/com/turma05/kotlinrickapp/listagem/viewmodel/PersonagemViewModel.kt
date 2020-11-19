@@ -11,24 +11,41 @@ class PersonagemViewModel(
     private val repository: PersonagemRepository
 ): ViewModel() {
 
-    var personagens: List<PersonagemModel> = listOf()
-    var personagensAntesDaBusca = listOf<PersonagemModel>()
+    private var _personagens: List<PersonagemModel> = listOf()
+    private var _personagensAntesDaBusca = listOf<PersonagemModel>()
+
+    private var _page: Int = 1
+    private var _total: Int = 0
 
     fun obterLista(name: String? = null) = liveData(Dispatchers.IO) {
-        val response = repository.obterLista(name)
+        // Obtem dados da API
+        val response = repository.obterLista(name, 1)
 
-        personagens = response.results
+        _personagens = response.results
+        _total = response.info.paginas
+
         emit(response.results)
     }
 
-    fun buscar(name: String? = null) = liveData(Dispatchers.IO) {
-        personagensAntesDaBusca = personagens
+    fun proximaPagina(name: String? = null) = liveData(Dispatchers.IO) {
+        _personagensAntesDaBusca = _personagens
 
-        val response = repository.obterLista(name)
+        if (_page + 1 <= _total) {
+            _page++
+
+            val response = repository.obterLista(name, _page)
+            emit(response.results)
+        }
+    }
+
+    fun buscar(name: String? = null, page: Int = 1) = liveData(Dispatchers.IO) {
+        _personagensAntesDaBusca = _personagens
+
+        val response = repository.obterLista(name, page)
         emit(response.results)
     }
 
-    fun listaAntiga() = personagensAntesDaBusca
+    fun listaAntiga() = _personagensAntesDaBusca
 
     class PersonagemViewModelFactory(
         private val repository: PersonagemRepository

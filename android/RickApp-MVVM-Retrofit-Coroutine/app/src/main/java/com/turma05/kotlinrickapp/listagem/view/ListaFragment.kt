@@ -37,7 +37,7 @@ class ListaFragment : Fragment() {
         val lista = view.findViewById<RecyclerView>(R.id.lista)
         val manager = LinearLayoutManager(view.context)
 
-        _listaDePersonagens = mutableListOf<PersonagemModel>()
+        _listaDePersonagens = mutableListOf()
         _listaAdapter = ListaAdapter(_listaDePersonagens)
 
         lista.apply {
@@ -59,6 +59,7 @@ class ListaFragment : Fragment() {
         showLoading(true)
 
         initSearch()
+        setScrollView()
     }
 
     private fun exibirResultados(lista: List<PersonagemModel>?) {
@@ -66,7 +67,6 @@ class ListaFragment : Fragment() {
 
         lista?.isNotEmpty()?.let { notfound(it) }
 
-        _listaDePersonagens.clear()
         lista?.let { _listaDePersonagens.addAll(it) }
 
         _listaAdapter.notifyDataSetChanged()
@@ -78,7 +78,9 @@ class ListaFragment : Fragment() {
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 searchView.clearFocus()
+
                 _viewModel.buscar(query).observe(viewLifecycleOwner, {
+                    _listaDePersonagens.clear()
                     exibirResultados(it)
                 })
 
@@ -87,10 +89,35 @@ class ListaFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 if (newText.isNullOrEmpty()) {
+                    _listaDePersonagens.clear()
                     exibirResultados(_viewModel.listaAntiga())
                 }
 
                 return true
+            }
+        })
+    }
+
+    private fun setScrollView() {
+        _view.findViewById<RecyclerView>(R.id.lista).addOnScrollListener(object :
+            RecyclerView.OnScrollListener() {
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                val target = recyclerView.layoutManager as LinearLayoutManager?
+
+                val totalItemCount = target!!.itemCount
+
+                val lastVisible = target.findLastVisibleItemPosition()
+
+                val lastItem = lastVisible + 5 >= totalItemCount
+
+                if (totalItemCount > 0 && lastItem) {
+                    _viewModel.proximaPagina().observe(viewLifecycleOwner, {
+                        exibirResultados(it)
+                    })
+                }
             }
         })
     }
