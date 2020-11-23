@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Whatsapp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="nome_message">Nome</string>
+    <string name="today">Today, 00:04</string>
+    <string name="text">31 October, 11:13</string>
+    <string name="nome_call">Nome</string>
+    <string name="message">Essa foi minha mensagem!</string>
+    <string name="nome_status">Nome</string>
+    <string name="my_status">My status</string>
+    <string name="tap_update">Tap to add status update</string>
+    <string name="recent_updates">Recent updates</string>
+</resources>
