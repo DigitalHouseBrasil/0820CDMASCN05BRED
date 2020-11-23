@@ -1,4 +1,4 @@
-package com.turma05.whatsappdemo
+package com.turma05.whatsappdemo.home.view
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
