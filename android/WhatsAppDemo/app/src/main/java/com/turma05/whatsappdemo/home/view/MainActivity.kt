@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import com.turma05.whatsappdemo.contact.view.ContactFragment
+import com.turma05.whatsappdemo.home.contact.view.ContactFragment
 import com.turma05.whatsappdemo.R
-import com.turma05.whatsappdemo.call.view.CallFragment
-import com.turma05.whatsappdemo.status.view.StatusFragment
+import com.turma05.whatsappdemo.home.call.view.CallFragment
+import com.turma05.whatsappdemo.home.status.view.StatusFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
