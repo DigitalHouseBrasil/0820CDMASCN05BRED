@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "628836596979",
+    "project_id": "teste-3e4ba",
+    "storage_bucket": "teste-3e4ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628836596979:android:d8c7965e47f53bda308b86",
+        "android_client_info": {
+          "package_name": "com.lucas.facebookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628836596979-161ie8ik6turfj5i58qirh9potks1g5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZPMKF6YXHLZCLSqFDGKvGchXS-gZ4bM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628836596979-161ie8ik6turfj5i58qirh9potks1g5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
