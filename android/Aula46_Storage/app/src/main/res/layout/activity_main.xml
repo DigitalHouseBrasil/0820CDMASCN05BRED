@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnProcurar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/procurar"/>
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enviar"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>
