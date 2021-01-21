@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <string name="nameMovies">nameMovies</string>
+    <string name="medium_vote">Avaliação:</string>
+</resources>
