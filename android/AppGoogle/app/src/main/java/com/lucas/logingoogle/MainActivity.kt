@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     private val signInButton: SignInButton by lazy { findViewById<SignInButton>(R.id.sign_in_button) }
+    private val btnTelaCadastro: Button by lazy { findViewById<Button>(R.id.btnTelaCadasto) }
+    private val btnRecuperar: Button by lazy { findViewById<Button>(R.id.btnEsqueceuSenha) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +39,15 @@ class MainActivity : AppCompatActivity() {
 
         signInButton.setOnClickListener { signIn() }
 
+        btnTelaCadastro.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnRecuperar.setOnClickListener {
+            val intent = Intent(this, RecoverActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun signIn() {
@@ -76,9 +89,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
+            if (currentUser.isEmailVerified) {
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Valide seu email", Toast.LENGTH_LONG).show()
+                auth.signOut()
+            }
         }
 
     }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "751214781820",
+    "project_id": "aula46storage",
+    "storage_bucket": "aula46storage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751214781820:android:b1cd1f27578f53a47070f9",
+        "android_client_info": {
+          "package_name": "com.turma05.aula46_storage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751214781820-hnaokp5i7q091tudv2qaf2tduuu4l6n8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.turma05.aula46_storage",
+            "certificate_hash": "3d7a9a8db09729039514d76cbe2635727454d3ad"
+          }
+        },
+        {
+          "client_id": "751214781820-umoruufh1svnofkcs7u12fb3torjoio4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvfuU6yX89AjdwK7w3jI0zMhB0-1I-INM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751214781820-umoruufh1svnofkcs7u12fb3torjoio4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
