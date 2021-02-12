@@ -31,5 +31,4 @@ class RickViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             .load(personagem.imagemUrl)
             .into(ivImage)
     }
-
 }
