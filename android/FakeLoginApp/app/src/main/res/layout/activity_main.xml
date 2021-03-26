@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorMain"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:text="Login"
+        android:textColor="@color/colorWhite"
+        android:textSize="34sp"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TO CONTINUE"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:letterSpacing="0.3"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp"
+        android:layout_gravity="center|center_vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="email"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textColorHint="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:textColorHint="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="@color/colorMain"
+            android:layout_gravity="center"
+            android:text="Log in"
+            android:textSize="16sp"
+            android:background="@color/colorWhite"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginTop="50dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:textColor="@color/colorWhite"
+            android:text="Create Account"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

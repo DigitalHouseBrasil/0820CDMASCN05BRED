@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars[2]" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text=" Lucas Gabriel" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/label_view"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:text="Vivão" />
+
+        <TextView
+            android:id="@+id/label_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="-"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/tv_specie"
+            app:layout_constraintStart_toEndOf="@+id/tv_status"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_specie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/label_view"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:layout_editor_absoluteX="218dp"
+            tools:text="Lindez" />
+
+        <TextView
+            android:id="@+id/tv_label_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:text="Location:"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_location"
+            tools:text="Terra" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

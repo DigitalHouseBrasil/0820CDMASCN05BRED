@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="22dp"
+        android:text="Temperatura em °C"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtNumeroTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="18dp"
+        android:hint="Digite a temp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnMostrarResultadoTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="140dp"
+        android:backgroundTint="#303E9F"
+        android:text="Converter"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnRestart"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="140dp"-->
+    <!--        android:layout_marginTop="22dp"-->
+    <!--        android:layout_marginEnd="140dp"-->
+    <!--        android:backgroundTint="#303E3F"-->
+    <!--        android:text="Restart"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white" />-->
+
+    <TextView
+        android:id="@+id/txtResultTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:padding="88dp"
+        android:gravity="center"
+        android:text="@string/fahrenheit"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Aula29Navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="ir_para_tela_azul">Ir para tela azul</string>
+</resources>

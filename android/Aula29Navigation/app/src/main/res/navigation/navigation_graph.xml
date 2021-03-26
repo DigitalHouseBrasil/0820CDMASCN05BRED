@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.digitalhouse.aula29navigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_detalheFragment2"
+            app:destination="@id/detalheFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_left"
+
+            />
+        <action
+            android:id="@+id/action_mainFragment_to_testeActivity"
+            app:destination="@id/testeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalheFragment"
+        android:name="com.digitalhouse.aula29navigation.DetalheFragment"
+        android:label="fragment_detalhe"
+        tools:layout="@layout/fragment_detalhe" >
+        <action
+            android:id="@+id/action_detalheFragment_to_segundoFragment"
+            app:destination="@id/segundoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment"
+        android:name="com.digitalhouse.aula29navigation.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" />
+    <fragment
+        android:id="@+id/azulFragment"
+        android:name="com.digitalhouse.aula29navigation.AzulFragment"
+        android:label="fragment_azul"
+        tools:layout="@layout/fragment_azul" />
+    <activity
+        android:id="@+id/testeActivity"
+        android:name="com.digitalhouse.aula29navigation.TesteActivity"
+        android:label="activity_teste"
+        tools:layout="@layout/activity_teste" />
+</navigation>
